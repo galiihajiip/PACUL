@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #F5F5F5;
+    --foreground: #1A1A1A;
+    --primary: #2D5F3F;
+    --secondary: #A8D5BA;
+    --accent: #7AC74F;
+  }
+
+  .dark {
+    --background: #1A1A1A;
+    --foreground: #F5F5F5;
+    --primary: #A8D5BA;
+    --secondary: #2D5F3F;
+    --accent: #7AC74F;
+  }
+}
+
+body {
+  @apply bg-pacul-bg text-pacul-text font-inter;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-pacul-primary text-white px-4 py-2 rounded-full hover:opacity-90 transition-all duration-200;
+  }
+  
+  .card-flat {
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm transition-all duration-300;
+  }
+}
